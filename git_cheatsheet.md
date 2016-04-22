@@ -38,14 +38,17 @@ origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
 git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
 ```
 
-- Fetch and merge with upstream
+- Fetch and merge with upstream `git fetch upstream; git merge upstream/master` is equivalent to `git pull upstream/master`
 ```
 git fetch upstream
 git checkout master
 git merge upstream/master
 ```
 
-## Merge or Rebase
+`git fetch` is the command that says "bring my local copy of the remote repository up to date."
+
+
+`## Merge or Rebase
 - `git merge branch_name`: takes new commits from the branch `branch_name` and adds them to the current branch.
 - `git rebase branch_name`: takes new commits from the branch `branch_name` and put the current branch on top of  
 
@@ -54,3 +57,13 @@ git merge upstream/master
 ```
 git mergetool -t kdidff3
 ```
+
+
+## Git: Basic Design Philosophy:
+Git: not a __client/server__ model that assumes the server is always available.  
+Instead, git is a __distributed__ model, in which the client and the server don't need to be only at the same time. Git can figure out the changes needed even when the remote repository is not reachable. Later when you need to send the changes to someone else, git can transfer them as a set of changes from a point in time known to the remote repository.
+
+There are often at least 3 copies of a project on you computer.
+- Your own repository with your own commit history.
+- Your working copy where you are editing and building
+- Your local "cached" copy of a remote repository.
