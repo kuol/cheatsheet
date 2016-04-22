@@ -45,6 +45,9 @@ git checkout master
 git merge upstream/master
 ```
 
+## Merge or Rebase
+- `git merge branch_name`: takes new commits from the branch `branch_name` and adds them to the current branch.
+- `git rebase branch_name`: takes new commits from the branch `branch_name` and put the current branch on top of  
 
 ## Resolve merge conflicts
 - Use kdidff3 as merge.tool
