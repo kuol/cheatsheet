@@ -58,6 +58,22 @@ git merge upstream/master
 git mergetool -t kdidff3
 ```
 
+## Git Branching
+- Create a new branch based on current branch and switch to it.
+```
+git checkout -b new_branch
+```
+
+- Push your local `new_branch` to remote
+```
+git push -u origin feature_branch_name
+```
+
+- Push all your local branches to the remote
+```
+git push -u origin feature_branch_name
+```
+
 
 ## Git: Basic Design Philosophy:
 Git: not a __client/server__ model that assumes the server is always available.  
