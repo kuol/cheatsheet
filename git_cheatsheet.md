@@ -74,6 +74,12 @@ git push -u origin feature_branch_name
 git push -u origin feature_branch_name
 ```
 
+If you find out that you were working on a **wrong branch**, but haven't committed to the wrong branch, do the following
+```
+git stash
+git checkout your_right_branch
+git stash apply
+```
 
 ## Git: Basic Design Philosophy:
 Git: not a __client/server__ model that assumes the server is always available.  
